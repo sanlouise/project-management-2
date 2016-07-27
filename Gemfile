@@ -17,7 +17,6 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
-gem 'milia'
 gem 'aws-sdk'
 gem 'stripe'
 
