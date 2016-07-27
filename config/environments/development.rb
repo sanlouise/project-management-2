@@ -13,6 +13,25 @@ Rails.application.configure do
     :address => "smtp.gmail.com",
     :port => "587",
     :authentication => :plain,
+    :user_name => "do-not-reply@example.com",
+    :password => ENV["SMTP_ENTRY"],
+    :enable_starttls_auto => true
+  }
+
+   
+  # devise says to define default url
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # set up for email sending even in dev mode
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.delivery_method = :smtp
+  
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => "587",
+    :authentication => :plain,
     :user_name => "do-not-reply@donotreply.com",
     :password => ENV["SMTP_ENTRY"],
     :enable_starttls_auto => true
