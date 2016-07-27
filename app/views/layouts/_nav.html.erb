@@ -14,26 +14,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><%= link_to "Home", "/" %></li>
-          
-          <li class="dropdown">
-              <%= link_to '#', class: "dropdown-toggle", id: "user-profile", data:{toggle: 'dropdown'}, role: "button", "aria-expanded" => "false" do %>
-                 Projects
-              <% end %>
-            </li>
-          
           <li><%= link_to "About", pages_about_path %></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'https://github.com/sanlouise' do %>
-            <i class="fa fa-facebook"></i>
-          <% end %></li>
-          
-          <li><%= link_to 'https://github.com/sanlouise' do %>
-            <i class="fa fa-pinterest"></i>
-          <% end %></li>
-          
-
-          
+          <li><%= link_to "Sign In", pages_about_path, class: 'btn btn-default btn-block tf-btn color' %></li>
         </ul>
       </div>
   </div>

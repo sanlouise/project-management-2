@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   
   resources :members
-  get 'home/index'
-
-   root :to => "home#index"
+   root :to => "pages#home"
 
     
   # *MUST* come *BEFORE* devise's definitions (below)
@@ -17,7 +15,6 @@ Rails.application.routes.draw do
     :sessions => "milia/sessions", 
     :passwords => "milia/passwords", 
   }
-
 
   get 'pages/home'
   get 'pages/about'
