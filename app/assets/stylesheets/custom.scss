@@ -186,3 +186,27 @@ img {
 .copyright-txt {
   padding-top: 9px;
 }
+
+.no-left-padding {
+  padding-left: 0px !important;
+}
+
+.no-right-padding {
+  padding-right: 0px !important;
+}
+
+// Navigation Custom Styling
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-nav > li > a {
+    color: white;
+    font-size: 16px;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+
