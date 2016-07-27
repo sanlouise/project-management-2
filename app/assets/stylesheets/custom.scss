@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+.conscioux-title {
+  font-family: Pacifico;
+  margin-bottom: 15px;
+  font-size: 60px;
+  color: white !important;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+  margin-top: 15px;
+}
+
+.well {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background-color: #b3d9ff;
+}
+
+.form-control {
+  background-color: white !important;
+}
+
+hr {
+  border-color: #BE834A;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: -7px;
+}
+
+.cosmetics-header {
+  letter-spacing: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cosmetics-categories {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.cosmetics-explanation-title {
+  margin-top: 40px !important;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+//New contact button about page
+.col-md-6.col-md-push-3 {
+  margin-bottom: 20px;
+}
+
+//New cosmetics review button
+.text-center.col-lg-6.col-lg-offset-3.col-md-6.col-md-offset-3.col-sm-12.col-xs-12 {
+  margin-top: 20px;
+}
+
+//For youtube videos
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// End Youtube Videos
+#vlamorous-content {
+  padding-top: 60px;
+  background-color: black;
+}
+
+#vlamorous-content.blog {
+  padding-top: 100px
+}
+
+.blog-post {
+  border: 0;
+  background: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.choose-cosmetics {
+  margin-bottom: 30px !important;
+}
+
+.uncondensed {
+  letter-spacing: 0px !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.no-markup {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.no-markup:hover {
+  text-decoration: none !important;
+  color: white !important;
+  background-color: none !important;
+}
+
+.cosmetics-button {
+  font-size: 25px;
+  padding: 10 10 10 10;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 0px;
+}
+
+.cosmetics-button:hover {
+  background: #BE834A;
+  border: 2px solid #BE834A;
+}
+
+// Code below for the cosmetics reviews index page
+.cosmetics-review {
+  background: #333031;
+  border: 2px solid #be834a;
+  min-height: 190px;
+  font-size: 16px;
+}
+
+.cosmetics-review-index {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.cosmetics-review:hover {
+  background: black;
+}
+
+.cosmetics-review-index-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+// End cosmetics index listing
+// Dropdown menu cosmetics
+@media screen and (max-width: 480px) {
+  .dropdown-menu>li>a {
+    color: white !important;
+    text-align: center;
+  }
+}
+
+;
+// End dropdown menu cosmetics
+.search-caption {
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.image-centered {
+  text-align: center !important;
+}
