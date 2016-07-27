@@ -80,7 +80,7 @@ hr {
 // End Youtube Videos
 #vlamorous-content {
   padding-top: 60px;
-  background-color: black;
+  background-color: none;
 }
 
 #vlamorous-content.blog {
@@ -176,4 +176,9 @@ img {
 
 .image-centered {
   text-align: center !important;
+}
+
+.homepage-plan-listing {
+  font-size: 18px;
+  list-style-type: none;
 }
