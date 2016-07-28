@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_tenant!, :only => [ :index ]
+  skip_before_action :authenticate_tenant!, :only => [ :home ]
 
   def home
     if current_user
