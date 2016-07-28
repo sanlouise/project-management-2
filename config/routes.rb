@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   
-  resources :projects
+  resources :tenants do
+    resources :projects
+  end
+  
   resources :members
-   root :to => "pages#home"
+  root :to => "pages#home"
 
     
   # *MUST* come *BEFORE* devise's definitions (below)
