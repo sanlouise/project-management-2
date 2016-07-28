@@ -23,18 +23,29 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    flash[:notice] = 'Project was successfully created.' if @project.save
-    respond_with(@project)
+    if @project.save
+      flash[:notice] = 'Project was successfully created.'
+      respond_with(@project)
+      redirect_to root_path
+    else
+      render :new
   end
 
   def update
-    flash[:notice] = 'Project was successfully updated.' if @project.update(project_params)
-    respond_with(@project)
+    if @project.update(project_params)
+      flash[:notice] = 'Project was successfully updated.'
+      respond_with(@project)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
     @project.destroy
+    flash[:notice] = 'Project was successfully destroyed.'
     respond_with(@project)
+    redirect_to root_path
   end
 
   private
