@@ -21,14 +21,14 @@ class ProjectsController < ApplicationController
   def edit
   end
 
-  def create
+ def create
     @project = Project.new(project_params)
-    if @project.save
-      flash[:notice] = 'Project was successfully created.'
-      respond_with(@project)
-      redirect_to root_path
-    else
-      render :new
+    respond_to do |format|
+      if @project.save       
+        format.html { redirect_to root_url, notice: 'The project was created successfully.' }
+      else
+        format.html { render :new }
+      end
     end
   end
 

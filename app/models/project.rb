@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
   validates_uniqueness_of :title
   validate :free_plan_can_only_have_five_projects
 
-  def free_plan_can_only_have_three_projects
+  def free_plan_can_only_have_five_projects
 
   	if self.new_record? && (tenant.projects.count > 5) && (tenant.plan == 'free')
   		errors.add(:base, "Free plans cannot have more than 5 projects.")
