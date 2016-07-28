@@ -9,14 +9,19 @@ class Project < ActiveRecord::Base
   		errors.add(:base, "Free plans cannot have more than 5 projects.")
   	end
 
-  	def self.by_plan_and_tenant(tenant_id)
-  		tenant = Tenant.find(tenant_id)
-  		if tenant.plan == 'premium'
-  			tenant.projects
-  		else 
-  			tenant.projects.order(:id).limit(5)
-  		end
-  	end
+    Project.by_user_plan_and_tenant(tenant.id)
 
   end
+
+  private
+
+    def self.by_user_plan_and_tenant(tenant_id)
+      tenant = Tenant.find(tenant_id)
+      if tenant.plan == 'premium'
+        tenant.projects
+      else 
+        tenant.projects.order(:id).limit(5)
+      end
+    end
+
 end
