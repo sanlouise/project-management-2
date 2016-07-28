@@ -1,79 +1,73 @@
-<% if current_user %>
-  <h3 class="text-center">Organization: <%= @tenant.name %></h3>
-  <%= render 'projects/list' %>
-<% else %>
 
 
-	<div id="tf-sliders">
-	  <div class="container"><!-- Container -->
-	    <div id="header-slider" class="carousel layout-two"">
+<div id="tf-sliders">
+  <div class="container"><!-- Container -->
+    <div id="header-slider" class="carousel layout-two"">
 
-	      <!-- Wrapper for slides -->
-	      <div class="carousel-inner" role="listbox">
-	        <div class="item active">
-	          <%= image_tag("pgmt.jpg") %>
-	          <div class="carousel-caption hidden-xs">
-	          	Welcome to HappyData
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div><!-- End Container -->
-	</div> 
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag("pgmt.jpg") %>
+          <div class="carousel-caption hidden-xs">
+          	Welcome to HappyData
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Container -->
+</div> 
 
-	<div id="vlamorous-content">
-	  <div class="container"><!-- Container -->
-	    <div class="row"><!-- Row -->
-	      <div class="col-md-4 col-md-offset-1"> <!-- Left Content for Blog Posts -->
-	        <div class="post-block"> <!-- Post #1-->
-	          <h3 class="media-heading">
-	            Basic
-	          </h3>
-	          <div class="post-detail text-center">
+<div id="vlamorous-content">
+  <div class="container"><!-- Container -->
+    <div class="row"><!-- Row -->
+      <div class="col-md-4 col-md-offset-1"> <!-- Left Content for Blog Posts -->
+        <div class="post-block"> <!-- Post #1-->
+          <h3 class="media-heading">
+            Basic
+          </h3>
+          <div class="post-detail text-center">
 
-		          <ul class="homepage-plan-listing">
-		            <li>Unlimited file uploads</li>
-		            <li>Access anywhere, anytime</li>
-		            <li>1 project</li>
-		            
-		            </br>
-		          </ul>
+	          <ul class="homepage-plan-listing">
+	            <li>Unlimited file uploads</li>
+	            <li>Access anywhere, anytime</li>
+	            <li>1 project</li>
 	            
-	          </div>
-	          
-	          <div class="row">
-	            <div class="col-col-md-10 col-sm-12 col-xs-12">
-	              <%= link_to 'Read More', new_user_registration_path, class: 'btn btn-default btn-block tf-btn color' %>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
+	            </br>
+	          </ul>
+            
+          </div>
+          
+          <div class="row">
+            <div class="col-col-md-10 col-sm-12 col-xs-12">
+              <%= link_to 'Read More', new_user_registration_path, class: 'btn btn-default btn-block tf-btn color' %>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div class="col-md-4 col-md-offset-2"> <!-- Left Content for Blog Posts -->
-	        <div class="post-block"> <!-- Post #1-->
-	          <h3 class="media-heading">
-	            Premium
-	          </h3>
-	          <div class="post-detail text-center">
+		<div class="col-md-4 col-md-offset-2"> <!-- Left Content for Blog Posts -->
+        <div class="post-block"> <!-- Post #1-->
+          <h3 class="media-heading">
+            Premium
+          </h3>
+          <div class="post-detail text-center">
 
-	            <ul class="homepage-plan-listing">
-		            <li>Unlimited file uploads</li>
-		            <li>Responsive design</li>
-		            <li>Access anywhere</li>
-		            <li>Unlimited projects</li>
-		          </ul>
-	            
-	          </div>
-	          
-	          <div class="row">
-	            <div class="col-col-md-10 col-sm-12 col-xs-12">
-	              <%= link_to 'Read More', new_user_registration_path, class: 'btn btn-default btn-block tf-btn color' %>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-<% end %>
+            <ul class="homepage-plan-listing">
+	            <li>Unlimited file uploads</li>
+	            <li>Responsive design</li>
+	            <li>Access anywhere</li>
+	            <li>Unlimited projects</li>
+	          </ul>
+            
+          </div>
+          
+          <div class="row">
+            <div class="col-col-md-10 col-sm-12 col-xs-12">
+              <%= link_to 'Read More', new_user_registration_path, class: 'btn btn-default btn-block tf-btn color' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
