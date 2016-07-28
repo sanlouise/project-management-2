@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :projects
   resources :members
    root :to => "pages#home"
 
