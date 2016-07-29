@@ -1,24 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-md-6 col-md-offset-3 text-center">
       <%- model_class = Project -%>
       <div class="page-header">
         <h3 class="text-center"><%= @project.title %></h3>
         <h3 class="text-center"><small>Organization - <%= tenant_name @project.tenant_id %></small></h3>
       </div>
 
+        <%= link_to '< Back to Home - Organization', root_path, class: 'btn btn-primary btn-xs'  %>
+        <br />
+        <br />
+        <br />
+          <strong><%= model_class.human_attribute_name(:title) %>:</strong>
+          <%= @project.title %>
+          <br />
+          <strong><%= model_class.human_attribute_name(:details) %>:</strong>
+         <%= @project.details %>
+         <br />
+         <strong><%= model_class.human_attribute_name(:deadline) %>:</strong>
+          <%= @project.deadline %>
+          <br />
+        </div>
 
-      <%= link_to '< Back to Home - Organization', root_path, class: 'btn btn-primary btn-xs'  %>
-
-      <dl class="dl-horizontal">
-        <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-        <dd><%= @project.title %></dd>
-        <dt><strong><%= model_class.human_attribute_name(:details) %>:</strong></dt>
-        <dd><%= @project.details %></dd>
-        <dt><strong><%= model_class.human_attribute_name(:deadline) %>:</strong></dt>
-        <dd><%= @project.deadline %></dd>
-      </dl>
-      
       <h3>Attachments</h3>
       <%= render 'attachments/list', attachments: @project.attachments %>
       <br/><br/>
