@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :tenant
+  has_many :attachments, dependent: :destroy
+
   validates_presence_of :title
   validates_presence_of :details
   validates_presence_of :deadline

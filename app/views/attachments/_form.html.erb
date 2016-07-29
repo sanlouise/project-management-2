@@ -29,7 +29,7 @@
   </div>
 
   <%= f.hidden_field :project_id %>
-  <%= f.submit nil, class:  'btn btn-primary' %>
+  <%= f.submit nil, class: 'btn btn-default btn-block tf-btn color' %>
   <%= link_to t('.cancel', default: t("helpers.links.cancel")),
             tenant_project_path(tenant_id: Tenant.current_tenant_id, 
             id: @attachment.project_id), class:  'btn btn-default' %>
