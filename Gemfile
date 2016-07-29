@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
 gem 'milia'
+gem 'aws-sdk'
+gem 'dotenv'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
