@@ -14,6 +14,7 @@ class AttachmentsController < ApplicationController
 
   def new
     @attachment = Attachment.new
+    @attachment.project_id = params[:project_id]
     respond_with(@attachment)
   end
 
@@ -24,6 +25,7 @@ class AttachmentsController < ApplicationController
     @attachment = Attachment.new(attachment_params)
     flash[:notice] = 'Attachment was successfully created.' if @attachment.save
     respond_with(@attachment)
+    redirect_to tenant_project_url(tenant_id: Tenant.current_tenant_id, id: @attachment.project_id)
   end
 
   def update
@@ -34,6 +36,7 @@ class AttachmentsController < ApplicationController
   def destroy
     @attachment.destroy
     respond_with(@attachment)
+    redirect_to tenant_project_url(tenant_id: Tenant.current_tenant_id, id: @attachment.project_id)
   end
 
   private
@@ -42,6 +45,6 @@ class AttachmentsController < ApplicationController
     end
 
     def attachment_params
-      params.require(:attachment).permit(:name, :key, :project_id)
+      params.require(:attachment).permit(:name, :project_id, :upload)
     end
 end
