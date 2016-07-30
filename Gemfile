@@ -9,6 +9,7 @@ gem 'devise'
 gem 'milia'
 gem 'aws-sdk'
 gem 'figaro'
+gem 'stripe'
 
 gem 'jquery-rails'
 
