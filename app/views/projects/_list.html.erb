@@ -1,16 +1,13 @@
-<%- model_class = Project -%>
-
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1 class="text-center">Your Ongoing Projects</h1>
 </div>
 <% if @projects.size > 0 %>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th><%= model_class.human_attribute_name(:title) %></th>
-        <th><%= model_class.human_attribute_name(:details) %></th>
-        <th><%= model_class.human_attribute_name(:deadline) %></th>
-        <th><%=t '.actions', :default => t("helpers.actions") %></th>
+        <th>Project Name</th>
+        <th>Description</th>
+        <th>Deadline</th>
       </tr>
     </thead>
     <tbody>
