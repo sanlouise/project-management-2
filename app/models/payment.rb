@@ -1,4 +1,5 @@
 class Payment < ActiveRecord::Base
+  
   belongs_to :tenant
   attr_accessor :card_number, :card_cvv, :card_expires_month, :card_expires_year
   
@@ -17,6 +18,5 @@ class Payment < ActiveRecord::Base
                           amount: 1000,
                           description: 'Premium',
                           currency: 'usd'
-
   end
 end

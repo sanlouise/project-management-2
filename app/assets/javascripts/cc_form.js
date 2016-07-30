@@ -30,7 +30,7 @@ $(document).ready(function () {
 
   //Submit handler listener for form
   $(".cc_form").on('submit', submitHandler);
-
+  
   //Change plan event listener
   var handlePlanChange = function(plan_type, form) {
     var $form = $(form);
