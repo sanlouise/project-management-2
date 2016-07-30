@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728213119) do
+ActiveRecord::Schema.define(version: 20160730101655) do
 
   create_table "attachments", force: true do |t|
     t.string   "name"
@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(version: 20160728213119) do
 
   add_index "members", ["tenant_id"], name: "index_members_on_tenant_id"
   add_index "members", ["user_id"], name: "index_members_on_user_id"
+
+  create_table "payments", force: true do |t|
+    t.string   "email"
+    t.string   "token"
+    t.integer  "tenant_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "payments", ["tenant_id"], name: "index_payments_on_tenant_id"
 
   create_table "projects", force: true do |t|
     t.string   "title"
