@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   root :to => "pages#home"
 
     
-  # *MUST* come *BEFORE* devise's definitions (below)
   as :user do   
     match '/user/confirmation' => 'confirmations#update', :via => :put, :as => :update_user_confirmation
   end
@@ -20,6 +19,7 @@ Rails.application.routes.draw do
     :sessions => "milia/sessions", 
     :passwords => "milia/passwords", 
   }
+
 
   get 'pages/home'
   get 'pages/about'

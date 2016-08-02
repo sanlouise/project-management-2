@@ -10,6 +10,7 @@ gem 'milia'
 gem 'aws-sdk'
 gem 'figaro'
 gem 'stripe'
+gem "simple_calendar"
 
 gem 'jquery-rails'
 

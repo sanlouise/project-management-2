@@ -13,8 +13,7 @@
     <tbody>
       <% @projects.each do |project| %>
         <tr>
-          <td><%= link_to project.title, 
-                  tenant_project_path(project, tenant_id: @tenant.id), class: 'main-link' %></td>
+          <td><%= link_to project.title, tenant_project_path(project, tenant_id: @tenant.id), class: 'main-link' %></td>
           <td><%= project.details %></td>
           <td><%= project.deadline %></td>
 
@@ -22,6 +21,10 @@
       <% end %>
     </tbody>
   </table>
+
+  
+
+  
 <% else %>
   <p class="lead">You did not add any projects yet.</p>
 <% end %>

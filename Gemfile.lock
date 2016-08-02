@@ -166,6 +166,8 @@ GEM
     shoulda-context (1.2.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simple_calendar (2.1.5)
+      rails (>= 3.0)
     spring (1.7.2)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
@@ -218,6 +220,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   shoulda
   shoulda-matchers
+  simple_calendar
   spring
   sqlite3
   stripe
