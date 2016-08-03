@@ -1,0 +1,11 @@
+<ul class="nav navbar-nav">
+  <% if current_user && current_user.is_admin? %>
+    <li><%= link_to "Add Members", new_member_path,
+              class: 'btn btn-default btn-block tf-btn color' %></li>
+    <li><%= link_to "Upgrade", edit_plan_path, class: 'btn btn-default btn-block tf-btn color' %></li>
+  <% end %>
+
+  <li><%= link_to "Home", "/" %></li>
+  <li><%= link_to "About", pages_about_path %></li>
+
+</ul>

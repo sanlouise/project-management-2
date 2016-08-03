@@ -1,0 +1,12 @@
+<ul class="nav navbar-right pull-right">
+  <% if current_user %>
+    <li class="col-md-8 user-name">
+      <%= link_to ( truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+    </li>
+    <li class="col-md-4 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-default btn-block tf-btn color', title: 'Logout', :method => :delete) %></li>
+  <% else %>
+    <li class="col-md-4 pull-right">
+      <%= link_to('Sign In', new_user_session_path, class: 'btn btn-default btn-block tf-btn color', title: 'Sign In') %>
+    </li>
+  <% end %>
+</ul>
