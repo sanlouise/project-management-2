@@ -1,6 +1,6 @@
 # Data Storage App
 
-Welcome to Data Storage App.
+Welcome to Data Storage App. Teams can sign up for a free or paid (in TEST) account to manage their data and deadlines for ongoing projects.
 
 ## Getting Started Locally
 
@@ -13,16 +13,11 @@ bundle
 
 bundle exec rake db:create
 bundle exec rake db:migrate
-bundle exec rake db:seed
 
 bundle exec rails server
 ```
 
 Your app will now be running on [localhost:3000](http://localhost:3000).
-
-## Usage
-
-TODO: Write usage instructions
 
 ## Contributing
 
@@ -40,10 +35,6 @@ TODO: Write usage instructions
 `git push origin my-new-feature`
 
 5. Submit a pull request and get listed as a contributor!
-
-## History
-
-TODO: Write history
 
 ## Credits
 
