@@ -1,8 +1,11 @@
 class UserProjectsController < ApplicationController
-  before_action :set_user_project, only: [:edit, :update, :destroy]
+  before_action :set_user_project, only: [:show, :edit, :update, :destroy]
 
   def index
     @user_projects = UserProject.all
+  end
+
+  def show
   end
 
   def new
@@ -58,4 +61,5 @@ class UserProjectsController < ApplicationController
     def user_project_params
       params.require(:user_project).permit(:project_id, :user_id)
     end
+    
 end
