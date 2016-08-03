@@ -13,7 +13,6 @@ class Project < ActiveRecord::Base
   	if self.new_record? && (tenant.projects.count > 5) && (tenant.plan == 'free')
   		errors.add(:base, "Free plans cannot have more than 5 projects.")
   	end
-    Project.by_user_plan_and_tenant(tenant.id)
   end
 
   private
@@ -30,9 +29,9 @@ class Project < ActiveRecord::Base
         if user.is_admin?
           tenant.projects.order(:id).limit(5)
         else
-          user.projects_where(tenant:id tenant_id).order(:id).limit(5)
+          user.projects.where(tenant_id: tenant.id).order(:id).limit(1)
         end
       end
     end
-    
+
 end
