@@ -1,25 +1,20 @@
-<%- model_class = Attachment -%>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>Name of Attachment</th>
       <th>Link to Attachment</th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', default: t("helpers.actions") %></th>
+      <th>Created At:</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% attachments.each do |attachment| %>
       <tr>
-        <td><%= link_to attachment.name, attachment_path(attachment), class: "main-link" %></td>
+        <td><%= link_to attachment.name, attachment_path(attachment) %></td>
         <td><%= s3_link Tenant.current_tenant_id, attachment.key %></td>
-        <td><%=l attachment.created_at %></td>
+        <td><%= attachment.created_at.strftime("%Y-%m-%d") %></td>
         <td>
-          <%= link_to t('.destroy', default: t("helpers.links.destroy")),
-                      attachment_path(attachment),
-                      method: :delete,
-                      data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) },
-                      class: 'btn btn-xs btn-danger' %>
+          <%= link_to "Delete", attachment_path(attachment), method: :delete, data: { confirm: "Are you sure you want to delete this attachment?" }, class: 'btn btn-xs btn-danger' %>
         </td>
       </tr>
     <% end %>
