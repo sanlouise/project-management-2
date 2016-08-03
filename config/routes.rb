@@ -20,8 +20,8 @@ Rails.application.routes.draw do
     :passwords => "milia/passwords", 
   }
 
-
   get 'pages/home'
   get 'pages/about'
+  match '/plan/edit' => 'tenants#edit', via: :get, as: :edit_plan
   
 end
