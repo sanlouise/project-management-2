@@ -1,8 +1,8 @@
 class Project < ActiveRecord::Base
   belongs_to :tenant
   has_many :attachments, dependent: :destroy
-  has_many :user_projects
-  has_many :users, through: :user_projects
+  has_many :user_projects, dependent: :destroy
+  has_many :users, through: :user_projects, dependent: :destroy
 
   validates_presence_of :title
   validates_presence_of :details
