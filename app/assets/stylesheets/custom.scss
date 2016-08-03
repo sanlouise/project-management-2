@@ -218,6 +218,136 @@ img {
   }
 }
 
+.new-btn {
+  text-transform: uppercase;
+  background-color: #43a047;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.new-btn:hover{
+  color: white;
+  background-color: #2e7d32;
+}
+
+.edit-btn {
+  text-transform: uppercase;
+  background-color: #0288d1;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.edit-btn:hover{
+  color: white;
+  background-color: #0d47a1;
+}
+
+.delete-btn {
+  text-transform: uppercase;
+  background-color: #d32f2f;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.delete-btn:hover{
+  color: white;
+  background-color: #b71c1c;
+}
+
+.with-padding {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+.back-btn {
+  text-transform: uppercase;
+  background-color: #BE834A;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  padding: 7px 35px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+  width: 30%;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.back-btn:hover{
+  color: white;
+  background-color: #6d4c41;
+}
+
 
 .user-name {
   padding-top: 7px;
