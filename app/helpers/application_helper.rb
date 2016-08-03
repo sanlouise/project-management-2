@@ -5,6 +5,10 @@ module ApplicationHelper
     ""
   end
 
+  def current_tenant_plan(tenant_id)
+    Tenant.find(tenant_id).plan
+  end
+
 	def tenant_name(tenant_id)
 		Tenant.find(tenant_id).name
 	end
