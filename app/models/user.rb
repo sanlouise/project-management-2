@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   has_many :user_projects
   has_many :projects, through: :user_projects
 
+  def is_admin?
+  	is_admin
+  end
+
 end
