@@ -15,6 +15,10 @@ class Project < ActiveRecord::Base
   	end
   end
 
+  def start_time
+    self.project.start ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+  end
+
   private
 
     def self.by_user_plan_and_tenant(tenant_id, user)

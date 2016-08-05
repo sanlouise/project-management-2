@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_tenant!, :only => [ :home ]
 
   def home
+
     if current_user
       if session[:tenant_id]
         Tenant.set_current_tenant session[:tenant_id]

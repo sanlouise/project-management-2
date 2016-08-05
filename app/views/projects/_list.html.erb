@@ -27,6 +27,14 @@
 <% end %>
 
 <% if (@tenant.can_create_projects?) %>
-  <%= link_to 'Add a New Project', new_tenant_project_path(tenant_id: @tenant.id), 
-            class: 'btn btn-default btn-block tf-btn color' %>
+  <%= link_to 'Add a New Project', new_tenant_project_path(tenant_id: @tenant.id), class: 'btn btn-default btn-block tf-btn color' %>
+<% end %>
+
+<%= month_calendar(attribute: :deadline) do |date| %>
+  <%= date %>
+  <% @projects.each do |project| %>
+    <div>
+      <%= project.title %>
+    </div>
+  <% end %>
 <% end %>
