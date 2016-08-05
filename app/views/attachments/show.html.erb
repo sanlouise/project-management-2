@@ -1,19 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-6 col-md-offset-3 text-center attachment-show">
+	<p>
+		<strong>Attachment:</strong>
+		<br>
+	  <%= @attachment.name %>
+	</p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @attachment.name %>
-</p>
-
-<p>
-  <strong>Key:</strong>
-  <%= @attachment.key %>
-</p>
-
-<p>
-  <strong>Project:</strong>
-  <%= @attachment.project %>
-</p>
-
-<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
-<%= link_to 'Back', attachments_path %>
+	<p><%= s3_link Tenant.current_tenant_id, @attachment.key %></p>
+	<%= link_to 'Back', attachments_path, class: "edit-btn" %>
+</div>

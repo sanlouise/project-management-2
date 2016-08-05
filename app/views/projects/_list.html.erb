@@ -23,7 +23,7 @@
   </table>
 
 <% else %>
-  <p class="lead">You haven't created any projects yet!</p>
+  <p class="lead text-center">You haven't created any projects yet!</p>
 <% end %>
 
 <% if (@tenant.can_create_projects?) %>
@@ -32,11 +32,21 @@
 <br>
 <hr>
 
-<%= month_calendar(attribute: :deadline) do |date| %>
-  <%= date %>
-  <% @projects.each do |project| %>
-    <div>
-      <%= project.title %>
-    </div>
+<% if @tenant.plan == 'free' && @projects.size == 5 %>
+  <div class="danger-div">
+    <p class="lead text-center">You have reached the maximum number of projects on our free plan. <br> <%= link_to 'Upgrade now', edit_plan_path %> to create an unlimited number of projects.</p>
+  </div>
+<% end %>
+
+<% if @projects.size > 0 %>
+
+  <%= month_calendar(attribute: :deadline) do |date| %>
+    <%= date %>
+    <% @projects.each do |project| %>
+      <% if date == project.deadline %>
+        <div class="project-date"><%= project.title %></div>
+      <% end %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
