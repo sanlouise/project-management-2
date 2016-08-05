@@ -36,6 +36,9 @@
               </div>
               
               <%= fields_for( :payment ) do |p| %>
+
+                <p class="text-center">This app is in TEST mode. Do not enter real credit card data. You can use the test card number 4012888888881881 and any other CVV code and dates.</p>
+
                 <div class="form-group">
                     <%= p.label :card_number, "Credit Card Number", data: { stripe: 'label' } %>
                     <%= p.text_field :card_number, class: "form-control", required: true,
