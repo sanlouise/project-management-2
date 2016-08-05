@@ -228,6 +228,7 @@ img {
 
 
 .new-btn {
+  text-align: inline-block;
   text-transform: uppercase;
   background-color: #43a047;
   color: white;
@@ -259,6 +260,7 @@ img {
 }
 
 .edit-btn {
+  float: right;
   text-transform: uppercase;
   background-color: #0288d1;
   color: white;
@@ -290,6 +292,7 @@ img {
 }
 
 .delete-btn {
+  float:right;
   text-transform: uppercase;
   background-color: #d32f2f;
   color: white;
@@ -369,9 +372,8 @@ img {
 .calendar-title {
   font-size: 20px;
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 16px !important;
 }
-
 
 .user-name {
   padding-top: 7px;
