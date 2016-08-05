@@ -14,7 +14,7 @@
       <% @projects.each do |project| %>
         <tr>
           <td><%= link_to project.title, tenant_project_path(project, tenant_id: @tenant.id), class: 'main-link' %></td>
-          <td><%= project.details %></td>
+          <td><%= project.details.truncate(100) %></td>
           <td><%= project.deadline %></td>
 
         </tr>
