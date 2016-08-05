@@ -166,31 +166,41 @@ Hero/Slider
 }
 /* Layout One */
 .carousel img{ 
-    width: 100%;
-    height: auto;
+    width: auto;
+    min-height: 900px;
 }
+
+.carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 20%;
+    font-size: 60px !important;
+}
+
+@media screen and (min-width: 780px) {
+    .homepage-text {
+        margin-bottom: 90px;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .homepage-text {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+}
+
 #header-slider.layout-one h2 {
     background: #333031;
     padding: 10px;
     display: block;
 }
-.layout-one.carousel-control .fa { top: 60% }
 .carousel-fade .carousel-inner .item >.carousel-caption {
     opacity: 0;
-    height: 60%;
-    -webkit-transition-property: opacity;
-    -moz-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
-    -webkit-transform: translate3d(100px, 0, 0);
-    transform: translate3d(100px, 0, 0);
-    transition: all 0.5s;
+    margin-bottom: 20%;
 }
-.carousel-fade .carousel-inner .active >.carousel-caption {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-}
+ 
 .carousel-fade .carousel-inner .active.left>.carousel-caption,
 .carousel-fade .carousel-inner .active.right>.carousel-caption {
     left: 0;
@@ -366,9 +376,7 @@ ul.social li a i:hover { background: #333031 }
 .post-detail .img-wrap blockquote {
     font-family: 'Playfair Display', serif;
     position: relative;
-    padding-bottom: 40px;
     padding-top: 22px;
-    margin-bottom: -20px;
     background: #CDAA7D;
     font-size: 22px;
     border-color: #BE834A;

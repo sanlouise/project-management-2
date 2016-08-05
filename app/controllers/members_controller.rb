@@ -1,8 +1,5 @@
 class MembersController < ApplicationController
 
-  # uncomment to ensure common layout for forms
-  # layout  "sign", :only => [:new, :edit, :create]
-
   def new()
     @member = Member.new()
     @user   = User.new()
@@ -11,13 +8,12 @@ class MembersController < ApplicationController
   def create()
     @user   = User.new( user_params )
 
-    # ok to create user, member
     if @user.save_and_invite_member() && @user.create_member( member_params )
       flash[:notice] = "New member added and invitation email sent to #{@user.email}."
       redirect_to root_path
     else
       flash[:error] = "errors occurred!"
-      @member = Member.new( member_params ) # only used if need to revisit form
+      @member = Member.new( member_params )
       render :new
     end
 
