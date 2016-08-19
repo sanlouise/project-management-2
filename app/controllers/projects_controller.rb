@@ -50,7 +50,7 @@ class ProjectsController < ApplicationController
     redirect_to root_path
   end
 
-  def users 
+  def users
     @project_users = (@project.users + (User.where(tenant_id: @tenant.id, is_admin: true))) - [current_user]
     @other_users = @tenant.users.where(is_admin: false) - (@project_users + [current_user])
   end
@@ -67,6 +67,13 @@ class ProjectsController < ApplicationController
           error: "User was not added to project." }
       end
     end
+  end
+
+  def delete_user
+    @project_user = UserProject(user_id: params[:user_id], project_id: @project.id)
+    @project.project_user.destroy
+    flash[:notice] = 'Project user was successfully destroyed.'
+    redirect_to redirect_to users_tenant_project_url(id: @project.id, tenant_id: @project.tenant_id)
   end
 
   private
