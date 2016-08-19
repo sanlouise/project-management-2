@@ -16,7 +16,7 @@ class Project < ActiveRecord::Base
   end
 
   def start_time
-    self.project.start ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+    self.project.start
   end
 
   private
