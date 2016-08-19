@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :tenants do
     resources :projects do 
       get 'users', on: :member
+      delete 'delete_user'
       put 'add_user', on: :member
     end
   end
