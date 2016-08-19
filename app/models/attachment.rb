@@ -1,13 +1,13 @@
 class Attachment < ActiveRecord::Base
   
+  validates_presence_of :name, :upload
+  validate :uploaded_file_size
+  
   before_save :upload_to_s3
   attr_accessor :upload
   belongs_to :project
   
   MAX_FILESIZE = 10.megabytes
-  
-  validates_presence_of :name, :upload
-  validate :uploaded_file_size
   
   private
   
